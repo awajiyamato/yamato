@@ -352,6 +352,21 @@
     color:var(--suna);font-weight:600;transition:.25s;
   }
   .catch .insta a:hover{background:var(--kin);color:var(--kon);}
+  .insta-block{
+    max-width:420px;margin:0 auto;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.3);
+    border-radius:20px;padding:40px 30px;transition:.3s;
+  }
+  .insta-block:hover{transform:translateY(-4px);border-color:var(--kin);background:rgba(255,255,255,.1);}
+  .insta-icon{width:96px;height:96px;border-radius:22px;box-shadow:0 8px 24px rgba(0,0,0,.3);}
+  .insta-lead{margin-top:22px;font-size:1.05rem;font-weight:500;color:var(--suna);}
+  .insta-handle{margin-top:6px;font-size:1.1rem;color:var(--kin);font-weight:700;letter-spacing:.05em;}
+  .insta-btn{
+    margin-top:22px;display:inline-block;
+    background:var(--kin);color:var(--kon);font-weight:700;
+    padding:12px 32px;border-radius:999px;font-size:.95rem;letter-spacing:.04em;
+  }
 
   /* アクセス */
   .access{background:var(--suna-2);}
@@ -687,21 +702,14 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="en">CATCH REPORT</span>
-      <h2>最新釣果情報</h2>
+      <h2>釣果情報</h2>
     </div>
-    <div class="catch-grid">
-      <div class="item"><div>釣果写真 01</div></div>
-      <div class="item"><div>釣果写真 02</div></div>
-      <div class="item"><div>釣果写真 03</div></div>
-      <div class="item"><div>釣果写真 04</div></div>
-      <div class="item"><div>釣果写真 05</div></div>
-      <div class="item"><div>釣果写真 06</div></div>
-      <div class="item"><div>釣果写真 07</div></div>
-      <div class="item"><div>釣果写真 08</div></div>
-    </div>
-    <div class="insta">
-      <a href="https://www.instagram.com/awj07yamato/" target="_blank" rel="noopener">Instagramで最新釣果を見る @awj07yamato</a>
-    </div>
+    <a class="insta-block" href="https://www.instagram.com/awj07yamato/" target="_blank" rel="noopener">
+      <img src="instagram.png" alt="Instagram" class="insta-icon">
+      <span class="insta-lead">最新の釣果はInstagramで配信中！</span>
+      <span class="insta-handle">@awj07yamato</span>
+      <span class="insta-btn">Instagramを見る</span>
+    </a>
   </div>
 </section>
 
