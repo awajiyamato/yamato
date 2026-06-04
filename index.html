@@ -39,7 +39,12 @@
     background:var(--suna);
     line-height:1.8;
     -webkit-font-smoothing:antialiased;
+    /* 日本語の読みやすさ：長い文字列のはみ出し防止＋なめらかな行折り */
+    overflow-wrap:break-word;
+    text-wrap:pretty;
   }
+  /* 見出しは行を均等に折り、1文字だけ次行に余るような不格好な改行を防ぐ */
+  h1,h2,h3,h4{text-wrap:balance;line-height:1.4;}
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
 
@@ -409,6 +414,11 @@
     .catch-grid{grid-template-columns:repeat(2,1fr);}
     .price-cards{grid-template-columns:1fr;}
     .extras-cards{grid-template-columns:1fr;}
+    /* スマホ時の文字バランス調整：広すぎる字間を詰め、見出し余白を最適化 */
+    .br-pc{display:none;}
+    .hero .lead{letter-spacing:.2em;}
+    .sec-head{margin-bottom:36px;}
+    .sec-head .en{letter-spacing:.28em;}
     /* スマホ時：PCの月カレンダーを隠し、スケジュール（リスト）表示を大きく出す */
     .cal-frame{display:none;}
     .cal-frame-sp{
@@ -457,7 +467,7 @@
   <div class="hero-content">
     <p class="lead">淡路島 育波港 釣り船</p>
     <h1>大和<small>Y A M A T O</small></h1>
-    <p class="copy">少人数でも大歓迎。お仲間内で和気あいあいと、<br>淡路の海で釣りを楽しみませんか。</p>
+    <p class="copy">少人数でも大歓迎。お仲間内で和気あいあいと、<br class="br-pc">淡路の海で釣りを楽しみませんか。</p>
     <div class="hero-cta">
       <a class="btn btn-tel" href="tel:08024037523">電話でご予約</a>
       <a class="btn btn-line" href="https://line.me/ti/p/KQKO0bSJTl" target="_blank" rel="noopener">LINEで相談</a>
