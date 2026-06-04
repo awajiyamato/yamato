@@ -64,6 +64,12 @@
     font-family:var(--mincho);font-weight:800;font-size:1.3rem;color:var(--suna);
     box-shadow:0 4px 14px rgba(0,0,0,.3);
   }
+  .logo-img{
+    height:52px;width:auto;
+    background:#fff;border-radius:10px;
+    padding:5px 9px;border:2px solid var(--kin);
+    box-shadow:0 4px 14px rgba(0,0,0,.3);
+  }
   .brand .name{font-family:var(--mincho);font-weight:800;font-size:1.35rem;letter-spacing:.08em;}
   .brand .sub{font-size:.7rem;letter-spacing:.18em;color:var(--kin);display:block;}
   nav ul{list-style:none;display:flex;gap:22px;}
@@ -176,6 +182,7 @@
   }
   .intro-photo .ph{text-align:center;font-size:.85rem;letter-spacing:.1em;}
   .intro-photo .ph .boat{font-size:3.4rem;margin-bottom:8px;}
+  .intro-photo img{width:100%;height:100%;object-fit:cover;}
   .intro-text h3{font-family:var(--mincho);font-size:1.7rem;color:var(--kon);margin-bottom:8px;letter-spacing:.06em;}
   .intro-text .since{color:var(--shu);font-weight:700;font-size:.95rem;margin-bottom:18px;}
   .intro-text p{margin-bottom:16px;}
@@ -197,6 +204,22 @@
   .charm-card .num{font-family:var(--mincho);font-size:2.4rem;color:var(--kin);font-weight:800;}
   .charm-card h4{font-size:1.2rem;margin:10px 0 12px;font-weight:700;letter-spacing:.04em;}
   .charm-card p{font-size:.92rem;color:rgba(255,255,255,.85);}
+
+  /* 船長紹介 */
+  .captain{background:var(--suna);}
+  .captain-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:46px;align-items:center;}
+  .captain-photo{border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(10,37,64,.25);}
+  .captain-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .captain-text p{margin-bottom:16px;font-size:1rem;}
+  .facility{margin-top:46px;}
+  .facility-item{
+    display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;
+    background:#fff;border-radius:16px;padding:22px;
+    box-shadow:0 10px 28px rgba(10,37,64,.08);
+  }
+  .facility-item img{width:100%;border-radius:12px;display:block;}
+  .facility-cap h4{font-family:var(--mincho);font-size:1.3rem;color:var(--kon);margin-bottom:10px;}
+  .facility-cap p{font-size:.95rem;color:#444;}
 
   /* 料金 */
   .price{background:var(--suna-2);}
@@ -362,6 +385,8 @@
     .menu-btn{display:block;}
     .intro-grid,.access-grid{grid-template-columns:1fr;}
     .charm-grid{grid-template-columns:1fr;}
+    .captain-grid{grid-template-columns:1fr;}
+    .facility-item{grid-template-columns:1fr;}
     .catch-grid{grid-template-columns:repeat(2,1fr);}
     .price-cards{grid-template-columns:1fr;}
     .extras-cards{grid-template-columns:1fr;}
@@ -376,7 +401,7 @@
 <header>
   <div class="nav-inner">
     <a class="brand" href="#top">
-      <span class="mark">大</span>
+      <img src="logo.png" class="logo-img" alt="遊漁船 大和 YAMATO">
       <span>
         <span class="sub">AWAJI IKUHA PORT</span>
         <span class="name">遊漁船 大和</span>
@@ -386,6 +411,7 @@
       <ul>
         <li><a href="#intro">大和について</a></li>
         <li><a href="#charm">魅力</a></li>
+        <li><a href="#captain">船長</a></li>
         <li><a href="#price">料金</a></li>
         <li><a href="#schedule">出船スケジュール</a></li>
         <li><a href="#catch">釣果</a></li>
@@ -417,6 +443,7 @@
   <div class="menu-inner">
     <a href="#intro">大和について</a>
     <a href="#charm">魅力</a>
+    <a href="#captain">船長</a>
     <a href="#price">料金</a>
     <a href="#schedule">出船スケジュール</a>
     <a href="#catch">釣果</a>
@@ -434,8 +461,7 @@
     </div>
     <div class="intro-grid">
       <div class="intro-photo">
-        <!-- 船の写真をここに入れる場合：この div を <img src="boat.jpg" alt="遊漁船 大和"> に差し替え -->
-        <div class="ph"><div class="boat">YAMATO</div>船の写真をここに掲載できます</div>
+        <img src="boat.jpg" alt="遊漁船 大和 船内のようす">
       </div>
       <div class="intro-text">
         <h3>釣り船　大和（ヤマト）</h3>
@@ -473,6 +499,35 @@
         <div class="num">03</div>
         <h4>トイレがきれい</h4>
         <p>女性・お子様でも安心してご利用いただけるよう、清潔を心がけています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 船長紹介 ===== -->
+<section class="captain" id="captain">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">CAPTAIN</span>
+      <h2>船長より</h2>
+    </div>
+    <div class="captain-grid">
+      <div class="captain-photo">
+        <img src="captain.jpg" alt="遊漁船 大和 船長">
+      </div>
+      <div class="captain-text">
+        <p>淡路島・育波港から出船しております、遊漁船「大和」の船長です。</p>
+        <p>少人数でもアットホームに、お一人様からご家族・お仲間まで、みなさんに楽しんでいただける釣りを心がけています。初めての方も大歓迎です。タコ・真鯛・青物など、淡路の海の幸を一緒に狙いましょう。</p>
+        <p>何かご不明な点があれば、お電話・LINEでお気軽にお問い合わせください。港でお待ちしております。</p>
+      </div>
+    </div>
+    <div class="facility">
+      <div class="facility-item">
+        <img src="toilet.jpg" alt="船内の清潔なトイレ">
+        <div class="facility-cap">
+          <h4>清潔なトイレを完備</h4>
+          <p>船内には清潔なトイレを完備しています。女性やお子様にも安心してご乗船いただけるよう、いつもきれいに保っています。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -590,7 +645,7 @@
           ▼▼▼ Googleカレンダーの貼り付け場所 ▼▼▼
           1. Googleカレンダーの「設定」→「カレンダーの統合」を開く
           2. 「埋め込みコード」の <iframe ... src="..."> の src の中身をコピー
-          3. 下の iframe の src="https://calendar.google.com/calendar/embed?src=beibanzhijiu%40gmail.com&ctz=Asia%2FTokyo&mode=MONTH&hl=ja&showTitle=0&showPrint=0&showCalendars=0" の "" の中に貼り付ける
+          3. 下の iframe の src="" の "" の中に貼り付ける
           4. 貼り付けたら、すぐ下の cal-placeholder の div を消す（または残してもOK）
           ※カズマに頼んでもらえば、レムが書き込みまでやります
         ============================================================= -->
