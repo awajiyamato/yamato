@@ -407,6 +407,11 @@
   @media(max-width:860px){
     nav,.nav-tel{display:none;}
     .menu-btn{display:block;}
+    /* スマホ：メニューバーを横スクロールではなく2列表示に */
+    .page-menu .menu-inner{display:grid;grid-template-columns:1fr 1fr;overflow-x:visible;}
+    .page-menu a{padding:14px 12px;font-size:.95rem;white-space:normal;border-bottom:1px solid rgba(201,162,75,.2);}
+    .page-menu a:nth-child(2n){border-right:none;}
+    .page-menu a:nth-last-child(-n+2){border-bottom:none;}
     .intro-grid,.access-grid{grid-template-columns:1fr;}
     .charm-grid{grid-template-columns:1fr;}
     .captain-grid{grid-template-columns:1fr;}
